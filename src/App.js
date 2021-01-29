@@ -12,12 +12,11 @@ function App() {
     <div className="App" style={{background: `url(${background})`}}>
         <NavBar />
         <div className='container'>
-          <BrowserRouter>
+          <BrowserRouter basename={'/ReactDex'}>
             <Switch>
-              <Route exact path="/" component={Dashboard} />
-              <Route exact path="/pokemon/:pokemonIndex" component={Pokemon} />
-              <Dashboard />
-            </Switch>
+            <Route exact path={`${process.env.PUBLIC_URL}/`} component={Dashboard} />
+            <Route path={`${process.env.PUBLIC_URL}/pokemon/:pokemonIndex`} component={Pokemon} />              
+              </Switch>
           </BrowserRouter>
         </div>
     </div>

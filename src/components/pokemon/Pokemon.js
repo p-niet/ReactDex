@@ -209,7 +209,7 @@ export default class Pokemon extends Component {
                         <div className='row align-items-center'>
                             <div className='col-md-3'>
                             <img 
-                                src={`../images/${this.state.pokemonIndex}.jpg`}
+                                src={`${process.env.PUBLIC_URL}/images/${this.state.pokemonIndex}.jpg`}
                                 className='card-img-top rounded mx-auto mt-2' />
                             </div>
                             <div className='col-md-9'>
